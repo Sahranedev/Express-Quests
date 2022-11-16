@@ -130,7 +130,7 @@ const postUser = (req, res) => {
 const updateMovie = (req, res) => {
   const id = parseInt(req.params.id);
 
-  const { firstname, lastname, email, city, language } = req.body;
+  const { title, director, year, color, duration } = req.body;
 
   database
 
