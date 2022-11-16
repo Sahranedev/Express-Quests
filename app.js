@@ -1,12 +1,8 @@
-// ...
-
 const express = require("express");
 
 const app = express();
 
-app.use(express.json()); // add this line
-
-// ...
+app.use(express.json());
 
 const port = process.env.APP_PORT ?? 5000;
 
@@ -30,6 +26,7 @@ app.post("/api/users", movieHandlers.postUser);
 
 ///// PUT ////
 app.put("/api/movies/:id", movieHandlers.updateMovie);
+app.put("/api/users/:id", movieHandlers.updateUser);
 
 app.listen(port, (err) => {
   if (err) {
